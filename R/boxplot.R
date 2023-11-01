@@ -37,4 +37,3 @@ boxplot <- function(var) {
 
   return(plot)
 }
-boxplot('Average.Medicare.Payments')
