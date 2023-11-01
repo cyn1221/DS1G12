@@ -1,12 +1,19 @@
 Package: DS1G12
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Analyzing DRG Data
 Version: 0.1.0
 Author: Hexiuli Huang
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Maintainer: Hexiuli Huang <hexiuli.huang@email.com>
+Description: This package provides tools for analyzing hospital-specific charges data 
+    from Medicare Inpatient Prospective Payment System (IPPS) for Fiscal Year (FY) 2011. 
+    It includes functions to create boxplots of payments by DRG code and calculate 
+    statistics for average Medicare payments across all DRG codes. The package is designed 
+    for educational purposes and serves as an example for building R packages.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
+Imports:
+    ggplot2,
+    dplyr,
+    stats
