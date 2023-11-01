@@ -9,6 +9,8 @@
 #' "Average Total Payments", "Average Covered Charges", or any other valid column name
 #' in the dataset.
 #'
+#' @import ggplot2
+#'
 #' @return A ggplot2 boxplot showing the distribution of the selected payment variable
 #' by DRG code.
 #' @export
@@ -19,15 +21,20 @@
 #' boxplot(var = "Average.Covered.Charges")
 
 boxplot <- function(var) {
-  ## read data
-  data(DRG_data)
-  plot <- DRG_data %>%
-    ggplot(aes(x=DRG.Definition,y=get(var))) +
+  library(ggplot2)
+  # Load the data
+  data("DRG_data")
+
+  # Extract the y values based on the 'var' argument
+  y_values <- DRG_data[[var]]
+
+  # Create the ggplot object
+  plot <- ggplot(DRG_data, aes(x = DRG.Definition, y = y_values)) +
     geom_boxplot() +
-    labs(title = paste0("Boxplot of ",gsub("\\.", " ", var)," by DRG Code"),
+    labs(title = paste0("Boxplot of ", gsub("\\.", " ", var), " by DRG Code"),
          x = 'DRG Code',
          y = gsub("\\.", " ", var))
+
   return(plot)
 }
-
 boxplot('Average.Medicare.Payments')
