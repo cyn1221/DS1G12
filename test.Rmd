@@ -1,5 +1,6 @@
 ---
 title: "test_data"
+author: "Group 12: Hexiuli Huang, Wanyun Liu, Ziyan Hu"
 output: html_document
 ---
 
@@ -9,9 +10,16 @@ load_all(".")
 rm(list = c("boxplot"))
 ```
 
+## Github:
+https://github.com/cyn1221/DS1G12.git
 
+## load package
 ```{r}
+library(DS1G12)
+```
 
+## test boxplot and calc_stat
+```{r}
 # Test the boxplot function for Average Medicare Payments
 boxplot('Average.Medicare.Payments')
 
