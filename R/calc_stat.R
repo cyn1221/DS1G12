@@ -18,15 +18,19 @@ calc_stat <- function(stat = "mean"){
   data(DRG_data)
   temp_data <- DRG_data$Average.Medicare.Payments
 
-  ## calculate mean
   if (stat == "mean") {
+    ## calculate mean
     result <- mean(temp_data)
   } else if (stat == 'median') {
+    ## calculate median
     result <- median(temp_data)
   } else if (stat == 'sd') {
+    ## calculate sd
     result <- sd(temp_data)
   } else {
+    ## hint
     stop("Please enter 'mean' or 'median'.")
   }
+  ## print result
   return(paste(stat, "for average medicare payments is", result, "."))
 }

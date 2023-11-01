@@ -2,7 +2,7 @@ Package: DS1G12
 Type: Package
 Title: Analyzing DRG Data
 Version: 0.1.0
-Author: Hexiuli Huang
+Author: Hexiuli Huang, Wanyun Liu, Ziyan Hu
 Maintainer: Hexiuli Huang <hexiuli.huang@email.com>
 Description: This package provides tools for analyzing hospital-specific charges data 
     from Medicare Inpatient Prospective Payment System (IPPS) for Fiscal Year (FY) 2011. 
