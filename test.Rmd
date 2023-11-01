@@ -1,0 +1,37 @@
+---
+title: "test_data"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(devtools)
+load_all(".")
+rm(list = c("boxplot"))
+```
+
+
+```{r}
+
+# Test the boxplot function for Average Medicare Payments
+boxplot('Average.Medicare.Payments')
+
+# Test the boxplot function for Average Total Payments
+boxplot('Average.Total.Payments')
+
+# Test the boxplot function for Average Covered Charges
+boxplot('Average.Covered.Charges')
+
+
+# Test the calc_stat function for the mean of Average Medicare Payments
+calc_stat("mean")
+
+# Test the calc_stat function for the median of Average Medicare Payments
+calc_stat("median")
+
+# Test the calc_stat function for the standard deviation of Average Medicare Payments
+calc_stat("sd")
+
+
+
+```
+
